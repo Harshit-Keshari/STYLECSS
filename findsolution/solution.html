@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Bar Example</title>
+  <link rel="stylesheet" href="../style.css">
+
+  <link rel="stylesheet" href="solution.css">
+
+  <style>
+    label.logo {
+      font-size: 30px;
+      color: aliceblue;
+      margin: 0 100px;
+      line-height: 80px;
+    }
+
+    label.logo:hover {
+      font-size: 32px;
+      color: green;
+    }
+
+    nav ul {
+      float: right;
+      list-style-type: none;
+    }
+
+    nav ul li {
+      display: inline-block;
+      line-height: 80px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: aliceblue;
+      font-size: 20px;
+      padding: 8px 20px;
+      font-weight: 20px;
+    }
+
+    ul li a:hover {
+      background-color: transparent;
+      border: 1px solid rgb(243, 243, 243);
+      cursor: pointer;
+      font-size: 22px;
+
+    }
+
+
+    .provider {
+      width: 80%;
+      margin: 0 auto;
+      background-color: grey;
+      padding: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+
+    .search-provider {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .search-provider input[type="text"] {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      width: 70%;
+    }
+
+    .search-provider button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .search-provider button:hover {
+      background-color: #0056b3;
+    }
+
+    .steps-container {
+      margin-top: 20px;
+    }
+
+    .step {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .step h3 {
+      margin-top: 0;
+    }
+
+    .step p {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" id="checkbtn"><i class="fa fa-bars"></i></label>
+    <label class="logo">CyberSheild</label>
+    <ul>
+      <li><a class="active" href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="identifytypeofattack/identifyattack.html"">Detect</a></li>
+      <li><a href=" findsolution/solution.html"">Cures</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+  </nav>
+
+  <div class="provider">
+    <div class="search-provider">
+      <input type="text" placeholder="Search...">
+      <button type="submit">Search</button>
+    </div>
+    <!-- Other content goes here -->
+  </div>
+
+  <div class="steps-container">
+
+    <h2 style="border:2px solid;display:inline-block"><u>Phishing Attacks:</u></h2>
+
+    <div class="step">
+      <h3>1. Implement HTTPS:</h3>
+      <p>- Use HTTPS to encrypt data transmitted between the client and the server to prevent man-in-the-middle attacks.
+      </p>
+    </div>
+
+    <div class="step">
+      <h3>2. Use CSRF Tokens:</h3>
+      <p>- Implement CSRF tokens to protect against forged requests and verify the authenticity of the form submission
+        on the server side.</p>
+      <p>- Add a hidden input field for CSRF token in the form.</p>
+      <pre><code>&lt;input type="hidden" name="csrf_token" value="your_csrf_token_here"&gt;</code></pre>
+    </div>
+
+    <div class="step">
+      <h3>3. Sanitize Input:</h3>
+      <p>- Validate and sanitize the input on the server-side to prevent SQL injection and other malicious inputs.</p>
+      <p>- Use server-side validation to check and sanitize the input before processing it.</p>
+      <p>- Use prepared statements or parameterized queries for database interactions to prevent SQL injection.</p>
+    </div>
+
+    <div class="step">
+      <h3>4. Add a Captcha:</h3>
+      <p>- Implement a captcha, such as Google reCAPTCHA, to ensure that the form is submitted by a human and not by a
+        bot.</p>
+      <p>- Add the following code inside the form to include Google reCAPTCHA.</p>
+      <pre><code>&lt;div class="g-recaptcha" data-sitekey="your_site_key_here"&gt;&lt;/div&gt;</code></pre>
+      <p>- Include the Google reCAPTCHA API in your HTML.</p>
+      <pre><code>&lt;script src="https://www.google.com/recaptcha/api.js" async defer&gt;&lt;/script&gt;</code></pre>
+    </div>
+
+    <div class="step">
+      <h3>5. Educate Users:</h3>
+      <p>- Educate users to be cautious about phishing attacks, such as not clicking on suspicious links and checking
+        the URL before entering any sensitive information.</p>
+    </div>
+
+    <div class="step">
+      <h3>6. Implement Content Security Policy (CSP):</h3>
+      <p>- Implement a Content Security Policy to reduce the risk of XSS (Cross-Site Scripting) attacks.</p>
+      <p>- Add the following meta tag in the `
+
+        <head>` section of your HTML.
+      </p>
+      <pre><code>&lt;meta http-equiv="Content-Security-Policy" content="default-src 'self';"&gt;</code></pre>
+    </div>
+
+    <div class="step">
+      <h3>7. Use a Web Application Firewall (WAF):</h3>
+      <p>- Use a Web Application Firewall to filter out malicious requests and prevent attacks.</p>
+    </div>
+  </div>
+  <hr>
+
+</body>
+
+</html>

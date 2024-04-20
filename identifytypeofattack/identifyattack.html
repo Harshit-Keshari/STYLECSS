@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="identifytypeofattack/identifyattack.css" rel="stylesheet">
+  <title>Cyber Attack Detection</title>
+  <style>
+    body {
+      background-image: url('back.avif');
+      background-size: cover;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      background-color: black;
+      color: white;
+      padding: 30px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .form-container {
+      margin-top: 20px;
+    }
+
+    .form-container label,
+    .form-container textarea,
+    .form-container input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    .form-container textarea {
+      height: 120px;
+      resize: vertical;
+    }
+
+    .form-container button {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-size: 16px;
+      width: 100%;
+      max-width: 200px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .form-container button:hover {
+      background-color: #0056b3;
+    }
+
+    .result {
+      margin-top: 30px;
+      border-top: 1px solid #ccc;
+      padding-top: 20px;
+    }
+
+    .result h3 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .result p {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        width: 95%;
+      }
+
+      .form-container button {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" id="checkbtn"><i class="fa fa-bars"></i></label>
+    <label class="logo">CyberSheild</label>
+    <ul>
+      <li><a class="active" href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="identifytypeofattack/identifyattack.html"">Detect</a></li>
+      <li><a href=" findsolution/solution.html"">Cures</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+  </nav>
+
+  <div class="container">
+    <h2> <u>Cyber Attack Detection</u></h2>
+
+    <div class="form-container">
+      <label for="website-link">Website Link:</label>
+      <input type="text" id="website-link" placeholder="Enter the link of the website">
+
+      <label for="activity-details">Unusual and Suspicious Activities:</label>
+      <textarea id="activity-details" placeholder="Describe any unusual or suspicious activities"></textarea>
+
+      <label for="additional-info">Additional Information:</label>
+      <textarea id="additional-info"
+        placeholder="Provide any additional information to detect the type of cyber attack"></textarea>
+
+      <button type="button" onclick="detectCyberAttack()">Detect Cyber Attack</button>
+    </div>
+
+    <div class="result" id="result">
+      <!-- Results will be displayed here -->
+    </div>
+  </div>
+
+  <script>
+    function detectCyberAttack() {
+      var websiteLink = document.getElementById('website-link').value;
+      var activityDetails = document.getElementById('activity-details').value;
+      var additionalInfo = document.getElementById('additional-info').value;
+
+      // Here you can add the logic to detect the type of cyber attack
+      // For demonstration purposes, let's assume the attack type is 'Phishing'
+      var attackType = 'Phishing';
+
+      var resultDiv = document.getElementById('result');
+      resultDiv.innerHTML = `
+            <h3>Results:</h3>
+            <p><strong>Website Link:</strong> ${websiteLink}</p>
+            <p><strong>Unusual and Suspicious Activities:</strong> ${activityDetails}</p>
+            <p><strong>Additional Information:</strong> ${additionalInfo}</p>
+            <p><strong>Detected Cyber Attack Type:</strong> ${attackType}</p>
+        `;
+    }
+  </script>
+
+</body>
+
+</html>

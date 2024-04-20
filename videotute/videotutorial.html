@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Tutorial</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: black;
+        color: #333;
+    }
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 30px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        border-radius: 8px;
+    }
+
+    .search-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 30px;
+    }
+
+    .search-container input[type="text"] {
+        padding: 12px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        width: 70%;
+        font-size: 16px;
+    }
+
+    .search-container button {
+        padding: 12px 24px;
+        border: none;
+        border-radius: 6px;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-size: 16px;
+    }
+
+    .search-container button:hover {
+        background-color: #0056b3;
+    }
+
+    .video {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    .video video {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .video video:hover {
+        transform: scale(1.05);
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="search-container">
+        <input type="text" placeholder="Search...">
+        <button type="submit">Search</button>
+    </div>
+    <!-- Other content goes here -->
+</div>
+
+<div class="container video">
+  <h1>Phishing:</h1>
+    <video src="What is Phishing and How to Protect Yourself from it_.mp4" controls autoplay muted></video>
+    <video src="Security Awareness Training_ Protecting Payment Card Data.mp4" controls autoplay muted></video>
+    <video src="What is Spear Phishing_ How to Detect and Avoid Spear Phishing Email Threats.mp4" controls autoplay muted></video>
+    <video src="Fortra's Terranova Security_ Better Security Awareness Training.mp4" controls autoplay muted></video>
+    <video src="How to know if your PC is hacked_ Suspicious Network Activity 101.mp4" controls autoplay muted></video>
+    <video src="How to Remove Trojan Virus from Windows_.mp4" controls autoplay muted></video>
+</div>
+
+</body>
+</html>
